@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>load count</title>
+</head>
+
+<body>
+
+	<div>
+		Welcome back! </br>You've visited here for <span id="content"></span> times.
+	</div>
+
+ 	
+ 	<script>
+ 		//利用localStorage計算web訪問次數
+ 		
+	 	var content=document.getElementById('content');
+		
+		if(!localStorage.loadCount){
+		localStorage.loadCount=0;}
+
+		else{
+		localStorage.loadCount=Number(localStorage.loadCount)+1;}
+		
+		content.innerHTML=localStorage.loadCount;
+
+	 </script>
+
+
+</body>
+</html>
+
+
+
+
